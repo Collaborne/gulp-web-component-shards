@@ -49,9 +49,9 @@ function WebComponentShardsStream(options) {
 util.inherits(WebComponentShardsStream, stream.Transform);
 
 /**
- * @param {Config} [config] the configuration
+ * @param {Config} [opts] the configuration
  */
-module.exports = function(opts) {
+function gwcs(opts) {
 	var config = opts || {};
 	var work = config.work || '.tmp/web-component-shards';
 
@@ -69,3 +69,5 @@ module.exports = function(opts) {
 	//		that these files have not been touched.
 	return new WebComponentShardsStream(wcsOptions);
 };
+
+module.exports = gwcs;
