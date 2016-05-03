@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Collaborne/gulp-web-component-shards#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "web-component-shards": "Collaborne/web-component-shards#debug/dependency-report"
+    "web-component-shards": "PolymerLabs/web-component-shards#v2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
