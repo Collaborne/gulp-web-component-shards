@@ -57,7 +57,7 @@ describe('gulp-web-component-shards', function() {
 					var name = path.basename(resultFile.path);
 					var contents = resultFile.contents.toString();
 					if (name === 'index.html') {
-						expect(contents).to.match(/link.*\brel=["']import["'].*\bhref=["']\/shared.html["']/);
+						expect(contents).to.match(/link.*\brel=["']import["'].*\bhref=["']shared.html["']/);
 						expect(contents).to.match(/template/);
 					} else if (name === 'shared.html') {
 						expect(contents).to.not.match(/template/);
