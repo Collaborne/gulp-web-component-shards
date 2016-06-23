@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/Collaborne/gulp-web-component-shards#readme",
   "dependencies": {
-    "gulp": "^3.9.1",
     "web-component-shards": "Collaborne/web-component-shards#debug/dependency-report"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
   },
