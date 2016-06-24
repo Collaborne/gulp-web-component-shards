@@ -46,10 +46,9 @@ function gwcs(opts) {
 		// See https://github.com/sindresorhus/gulp-esnext/issues/8 for a similar example.
 		var discoverErr;
 		try {
-			console.log('Considering ' + file.relative + ' as endpoint');
 			wcsOptions.endpoints.push(file.relative);
 		} catch (err) {
-			console.log('Error in collecting endpoints: ' + err);
+			console.error('Error in collecting endpoints: ' + err);
 			discoverErr = err;
 		}
 
@@ -67,16 +66,13 @@ function gwcs(opts) {
 		var shards = new WebComponentShards(wcsOptions);
 		return shards.build().then(function() {
 			// Now collect all files from options.dest_dir for further processing.
-			console.log('Collecting output from ' + options.dest_dir);
 			gulp.src(options.dest_dir + '/**/*.html').on('data', function(file) {
-				console.log('Found output: '+ file.relative);
 				push(file);
 			}).on('end', function() {
-				console.log('Found all output, calling cb');
 				cb();
 			});
 		}).catch(function(err) {
-			console.log('Error in build(): ' + err);
+			console.error('Error in build(): ' + err);
 			cb(new gutil.PluginError('gulp-web-component-shards', err));
 		});
 	}
