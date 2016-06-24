@@ -60,8 +60,8 @@ function gwcs(opts) {
 		}
 	}
 
-	function processAndCollect() {
-		var emit = this.emit.bind(this);
+	function processAndCollect(cb) {
+		var push = this.push.bind(this);
 
 		// Run the actual sharding tool
 		var shards = new WebComponentShards(wcsOptions);
@@ -70,14 +70,14 @@ function gwcs(opts) {
 			console.log('Collecting output from ' + options.dest_dir);
 			gulp.src(options.dest_dir + '/**/*.html').on('data', function(file) {
 				console.log('Found output: '+ file.relative);
-				emit('data', file);
+				push(file);
 			}).on('end', function() {
 				console.log('Found all output, calling cb');
-				emit('end');
+				cb();
 			});
 		}).catch(function(err) {
 			console.log('Error in build(): ' + err);
-			emit('error', new gutil.PluginError('gulp-web-component-shards', err));
+			cb(new gutil.PluginError('gulp-web-component-shards', err));
 		});
 	}
 
