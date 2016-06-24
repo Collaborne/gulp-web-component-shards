@@ -1,6 +1,6 @@
 {
   "name": "gulp-web-component-shards",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Gulp plugin for web-component-shards",
   "main": "index.js",
   "repository": {
