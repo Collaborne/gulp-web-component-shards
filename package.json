@@ -23,7 +23,7 @@
   "dependencies": {
     "gulp-util": "^3.0.7",
     "through2": "^2.0.1",
-    "web-component-shards": "Collaborne/web-component-shards#debug/dependency-report"
+    "web-component-shards": "Collaborne/web-component-shards#collaborne"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
