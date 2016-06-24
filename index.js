@@ -65,8 +65,8 @@ function gwcs(opts) {
 		// Run the actual sharding tool
 		var shards = new WebComponentShards(wcsOptions);
 		return shards.build().then(function() {
-			// Now collect all files from options.dest_dir for further processing.
-			gulp.src(options.dest_dir + '/**/*.html').on('data', function(file) {
+			// Now collect all files from wcsOptions.dest_dir for further processing.
+			gulp.src(wcsOptions.dest_dir + '/**/*.html').on('data', function(file) {
 				push(file);
 			}).on('end', function() {
 				cb();
