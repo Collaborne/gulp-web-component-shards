@@ -51,7 +51,8 @@ function gwcs(opts) {
 		if (discoverErr) {
 			cb(new gutil.PluginError('gulp-web-component-shards', discoverErr));
 		} else {
-			cb(null, file);
+			// Don't push the file: we're "consuming" it, and will produce new ones in our flush function.
+			cb(null);
 		}
 	}
 
