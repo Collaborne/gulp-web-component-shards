@@ -40,10 +40,6 @@ function gwcs(opts) {
 	//		that these files have not been touched.
 
 	function discoverEndpoint(file, enc, cb) {
-		// Note that we're only calling cb() once at the end, and use _push/_emit inside the try-catch.
-		// This avoids situations where we get another error in the callback, trigger the catch, and then
-		// call the callback again.
-		// See https://github.com/sindresorhus/gulp-esnext/issues/8 for a similar example.
 		var discoverErr;
 		try {
 			wcsOptions.endpoints.push(file.relative);
