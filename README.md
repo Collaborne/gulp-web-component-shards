@@ -1,5 +1,5 @@
-gulp-web-component-shards [![Build Status](https://travis-ci.org/Collaborne/gulp-web-component-shards.svg?branch=master)](https://travis-ci.org/Collaborne/gulp-web-component-shards)
-=========
+# gulp-web-component-shards [![Build Status](https://travis-ci.org/Collaborne/gulp-web-component-shards.svg?branch=master)](https://travis-ci.org/Collaborne/gulp-web-component-shards) [![Greenkeeper badge](https://badges.greenkeeper.io/Collaborne/gulp-web-component-shards.svg)](https://greenkeeper.io/)
+
 Plugin for gulp to process endpoints using [web-component-shards](https://github.com/PolymerLabs/web-component-shards).
 
 ## Installation
