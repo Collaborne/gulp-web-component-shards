@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "chai": "^3.5.0",
+    "chai": "^4.0.2",
     "mocha": "^3.2.0"
   },
   "scripts": {
